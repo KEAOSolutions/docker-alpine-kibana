@@ -17,7 +17,7 @@ RUN curl -s ${KIBANA_DOWNLOAD_URL} | tar zx -C /usr/share && \
     mkdir -p /usr/share/kibana/node/bin && \
     ln -sf /usr/bin/node /usr/share/kibana/node/bin/node && \
     echo -ne "- with Kibana `kibana -V`\n" >> /root/.built
-ADD config /usr/share/kibaba/config
+ADD config /usr/share/kibana/config
 RUN apk del curl && \
     rm -rf /var/cache/apk/*
 
